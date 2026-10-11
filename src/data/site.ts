@@ -53,7 +53,7 @@ export const homeCards = [
 		num: '01',
 		title: 'Projects',
 		href: '/projects',
-		desc: 'A selection of professional and personal development projects',
+		desc: 'A selection of professional and personal projects',
 	},
 	{
 		num: '02',
@@ -188,4 +188,4 @@ export const books: Book[] = [
 
 // Individual projects live in src/content/projects/*.md
 export const projectsIntro =
-	'Individual projects and professional engagements from web applications to technical training';
+	'Individual projects and professional engagements from web applications to technical training.';
