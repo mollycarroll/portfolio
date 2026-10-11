@@ -3,6 +3,7 @@ name: PromptCamp
 year: '2023'
 summary: Technical training at Thoughtworks for AI-powered solution design
 stack: []
+screenshot: false
 order: 4
 ---
 

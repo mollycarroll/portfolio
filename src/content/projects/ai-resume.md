@@ -4,6 +4,7 @@ year: '2026'
 summary: AI-powered chatbot that represents me in basic tech interview recruiting Q&A scenarios
 stack: [Python, FastAPI, Hugging Face, LangChain]
 url: https://github.com/mollycarroll/icarus-001
+screenshot: ../../assets/projects/ai-resume.png
 order: 1
 ---
 

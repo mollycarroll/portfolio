@@ -3,6 +3,7 @@ name: Interview Genie
 year: '2024'
 summary: AI copilot bot to accompany recruiters in job interviews by analyzing candidate answers in real time
 stack: [React, Python, LangChain]
+screenshot: false
 order: 3
 ---
 

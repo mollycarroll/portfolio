@@ -4,6 +4,7 @@ year: '2026'
 summary: A full stack web app that enables musicians to find live music venues in a given area for future gigs
 stack: [React, Vite, TypeScript, Python, FastAPI]
 url: https://github.com/mollycarroll/gig-finder
+screenshot: ../../assets/projects/gig-finder.png
 order: 2
 ---
 
