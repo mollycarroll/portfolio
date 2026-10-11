@@ -23,11 +23,10 @@ export interface EduGroup {
 }
 
 export const site = {
-	name: 'sam rivera',
-	tagline: 'design / web / mobile',
-	email: 'hello@example.com',
-	availability: 'Currently taking on new projects',
-	// Put your resume at public/resume.pdf (or change this path).
+	name: 'Molly Carroll',
+	tagline: 'full stack developer',
+	email: 'molly@mollycarroll.dev',
+	availability: 'Currently open to work',
 	resume: '/resume.pdf',
 };
 
@@ -40,8 +39,8 @@ export const nav = [
 ];
 
 export const bio = [
-	"I'm a designer and developer building websites and mobile apps for clients of all sizes. I work across the whole process, from scoping and wireframes through to shipping and maintaining production code.",
-	'Day to day I work in React, Next.js and TypeScript, with a background in UX and UI design that helps me plan and design products, not just build them.',
+	"I'm a full stack software developer with experience building technology for enterprise applications. I've worked on each stage of the development process, from architectural planning and decision-making to feature implementation to release and production maintenance.",
+	"In addition, I've been expanding my professional and technical scope toward DevOps and production support.",
 ];
 
 export const homeCards = [
@@ -49,78 +48,61 @@ export const homeCards = [
 		num: '01',
 		title: 'Projects',
 		href: '/projects',
-		desc: 'Selected client and personal work across web and mobile.',
+		desc: 'A selection of professional and personal development projects',
 	},
 	{
 		num: '02',
 		title: 'Skills',
 		href: '/skills',
-		desc: 'Front-end, back-end and mobile development with modern tools.',
+		desc: 'Front-end, back-end, DevOps, AI, databases and more',
 	},
 	{
 		num: '03',
 		title: 'Career',
 		href: '/career',
-		desc: 'Roles, teams and projects from freelance to technical lead.',
+		desc: 'Professional and volunteer experience across roles, teams and projects',
 	},
 	{
 		num: '04',
 		title: 'Education',
 		href: '/education',
-		desc: 'Certifications, conferences and ongoing development.',
+		desc: "Certifications, technical and university education, books I've read",
 	},
 ];
 
 export const skillsIntro =
-	'A breakdown of the tools and disciplines I use across the design and development lifecycle, from first wireframe to deployment.';
+	'A breakdown of the tools, frameworks and systems I use in day to day development.';
 
 export const skills: SkillGroup[] = [
 	{
-		title: 'UX/UI Design',
-		items: [
-			'User journeys',
-			'Wireframing',
-			'Prototyping',
-			'Figma',
-			'Design systems',
-			'Typography',
-			'Responsive design',
-		],
+		title: 'Languages',
+		items: ['Java', 'Python', 'JavaScript', 'TypeScript'],
 	},
 	{
-		title: 'Front-end',
-		items: [
-			'TypeScript',
-			'React',
-			'Next.js',
-			'Vite',
-			'TailwindCSS',
-			'Sass/SCSS',
-			'GSAP',
-		],
+		title: 'Frameworks & Libraries',
+		items: ['React', 'Node.js', 'FastAPI', 'Spring'],
 	},
 	{
-		title: 'Back-end',
-		items: [
-			'Node.js',
-			'PostgreSQL',
-			'Prisma',
-			'Firebase',
-			'API development',
-			'Payload CMS',
-		],
+		title: 'AI',
+		items: ['Claude Code', 'Hugging Face', 'LangChain'],
 	},
 	{
-		title: 'Mobile & DevOps',
+		title: 'Cloud & DevOps',
 		items: [
-			'Ionic',
-			'Capacitor',
-			'Xcode',
-			'Android Studio',
-			'AWS',
+			'Google Cloud Platform (certified)',
+			'Kubernetes',
 			'Docker',
+			'GitHub Actions',
 			'CI/CD',
 		],
+	},
+	{
+		title: 'Testing',
+		items: ['JUnit', 'Mockito', 'Jest', 'Postman', 'Git'],
+	},
+	{
+		title: 'Observability',
+		items: ['Elasticsearch', 'Dynatrace', 'Datadog'],
 	},
 ];
 
