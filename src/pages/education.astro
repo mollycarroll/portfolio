@@ -1,7 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import PageHero from '../components/PageHero.astro';
-import { eduGroups, eduIntro } from '../data/site';
+import { eduGroups, eduIntro, books, goodreadsUrl } from '../data/site';
 ---
 
 <Base title="Education">
@@ -28,6 +28,29 @@ import { eduGroups, eduIntro } from '../data/site';
 			</section>
 		))
 	}
+
+	<section class="group">
+		<div class="section-head group-head">
+			<h2>Favorite books</h2>
+			<span class="count">{String(books.length).padStart(2, '0')}</span>
+		</div>
+		<div class="grid-3">
+			{
+				books.map((b) => (
+					<article class="tile item">
+						<div class="item-body">
+							<span class="item-title">{b.title}</span>
+							<span class="org">{b.author}</span>
+						</div>
+					</article>
+				))
+			}
+			<a class="tile-accent goodreads" href={goodreadsUrl} target="_blank" rel="noopener noreferrer">
+				<span class="goodreads-text">See the full shelf on Goodreads</span>
+				<span class="goodreads-cta mono">VIEW ON GOODREADS ↗</span>
+			</a>
+		</div>
+	</section>
 </Base>
 
 <style>
@@ -59,6 +82,8 @@ import { eduGroups, eduIntro } from '../data/site';
 		display: flex;
 		flex-direction: column;
 		gap: 4px;
+		/* Keeps text at the bottom of the tile when there is no year above it (books) */
+		margin-top: auto;
 	}
 
 	.item-title {
@@ -71,5 +96,37 @@ import { eduGroups, eduIntro } from '../data/site';
 	.org {
 		font-size: 13px;
 		color: var(--muted-2);
+	}
+
+	.goodreads {
+		grid-column: 1 / -1;
+		padding: 16px 22px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 16px;
+	}
+
+	.goodreads:hover {
+		background: var(--alt);
+		color: var(--alt-fg);
+	}
+
+	.goodreads-text {
+		font-weight: 700;
+		font-size: 15px;
+	}
+
+	.goodreads-cta {
+		font-weight: 700;
+		font-size: 12px;
+		white-space: nowrap;
+	}
+
+	@media (max-width: 760px) {
+		.goodreads {
+			flex-direction: column;
+			align-items: flex-start;
+		}
 	}
 </style>

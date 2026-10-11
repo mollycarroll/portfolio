@@ -22,6 +22,11 @@ export interface EduGroup {
 	items: EduItem[];
 }
 
+export interface Book {
+	title: string;
+	author: string;
+}
+
 export const site = {
 	name: 'Molly Carroll',
 	tagline: 'full stack developer',
@@ -107,79 +112,80 @@ export const skills: SkillGroup[] = [
 ];
 
 export const careerIntro =
-	'Fifteen years across agencies, product teams and freelance work, moving from front-end development into technical leadership.';
+	'Over three years in full stack development with prior experience in technical support.';
 
 export const jobs: Job[] = [
 	{
-		role: 'Independent Contractor',
-		company: 'Self-employed',
-		dates: '2025 – Present',
-		type: 'Freelance',
+		role: 'Software Developer',
+		company: 'Greenstand',
+		dates: '2026 - Present',
+		type: 'Volunteer',
 		points: [
-			'Senior full-stack developer for a cloud platform connecting childcare centres with educators.',
-			'Mobile app developer for a home fragrance brand.',
+			'Developer for open source project by global nonprofit, including microservices and cloud deployments',
 		],
 	},
 	{
-		role: 'Technical Lead',
-		company: 'Studio North',
-		dates: '2018 – 2025',
-		type: 'Full-time',
+		role: 'Software Developer',
+		company: 'Thoughtworks',
+		dates: '2021 - 2024',
+		type: 'Full time',
 		points: [
-			"Sole developer maintaining and building the agency's full website portfolio.",
-			'Led the rebuild of a health and well-being app; promoted to Technical Lead in 2022.',
+			'Consultant developer working with clients to build custom software that meets business needs',
+			'Java microservices back-end development, JavaScript web application development, GCP, AI-based solution design and development',
 		],
 	},
 	{
-		role: 'Front-end Developer',
-		company: 'Brightline Software',
-		dates: '2010 – 2017',
-		type: 'Full-time',
+		role: 'Digital Advertising Support Specialist',
+		company: 'Accenture',
+		dates: '2019 - 2020',
+		type: 'Full time',
 		points: [
-			'Built over 60 websites for government and higher education clients.',
-			'Team lead for the professional services team.',
+			'Technical support specialist building JavaScript-based solutions for a global sales team supporting social media advertisers',
+			'Developed standardized optimizations for major e-commerce platforms (Shopify, BigCommerce, WordPress)',
 		],
 	},
 ];
 
-export const eduIntro =
-	'Formal study, certifications and the conferences and courses that keep my skills current.';
+export const eduIntro = 'Formal study, certifications and my reading list';
 
 export const eduGroups: EduGroup[] = [
 	{
-		title: 'Certifications',
+		title: 'Certifications & education',
 		items: [
 			{
 				year: '2024',
-				title: 'AWS Certified Developer – Associate',
-				org: 'Amazon Web Services',
+				title: 'Google Cloud Platform Associate Cloud Engineer',
+				org: 'Google',
 			},
 			{
 				year: '2021',
-				title: 'Google UX Design Certificate',
-				org: 'Google / Coursera',
+				title: 'Software Engineering Certificate',
+				org: 'General Assembly',
 			},
 			{
-				year: '2016',
-				title: 'Bachelor of Information Technology',
-				org: 'RMIT University',
+				year: '2015',
+				title: 'Dual Bachelor of Arts',
+				org: 'Saint Louis University',
 			},
 		],
 	},
+];
+
+export const goodreadsUrl =
+	'https://www.goodreads.com/review/list/2434730?tag=tech';
+
+export const books: Book[] = [
+	{ title: 'Designing Data-Intensive Applications', author: 'Martin Kleefman' },
 	{
-		title: 'Conferences & courses',
-		items: [
-			{ year: '2025', title: 'React Summit', org: 'Amsterdam' },
-			{
-				year: '2024',
-				title: 'Advanced GSAP Animation',
-				org: 'Creative Coding Club',
-			},
-			{ year: '2023', title: 'Web Directions Summit', org: 'Sydney' },
-		],
+		title: 'The Pragmatic Programmer',
+		author: 'Andrew Hunt & Dave Thomas',
+	},
+	{
+		title: 'The Phoenix Project',
+		author: 'Gene Kim, Kevin Behr, George Spafford',
 	},
 ];
 
 // Individual projects live in src/content/projects/*.md
 export const projectsIntro =
-	'A selection of client and personal work, from marketing sites to production mobile apps.';
+	'Individual projects and professional engagements from web applications to technical training';
