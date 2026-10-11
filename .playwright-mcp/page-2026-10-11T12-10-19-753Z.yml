@@ -1,0 +1,77 @@
+- generic [active] [ref=f5e1]:
+  - generic [ref=f5e2]:
+    - banner [ref=f5e3]:
+      - link "sam rivera design / web / mobile" [ref=f5e4] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f5e5]: sam rivera
+        - generic [ref=f5e6]: design / web / mobile
+      - navigation "Main" [ref=f5e7]:
+        - link "Projects" [ref=f5e8] [cursor=pointer]:
+          - /url: /projects
+        - link "Skills" [ref=f5e9] [cursor=pointer]:
+          - /url: /skills
+        - link "Career" [ref=f5e10] [cursor=pointer]:
+          - /url: /career
+        - link "Education" [ref=f5e11] [cursor=pointer]:
+          - /url: /education
+        - link "Resume ↗" [ref=f5e12] [cursor=pointer]:
+          - /url: /resume.pdf
+      - group "Colour theme" [ref=f5e14]:
+        - button "Light mode" [ref=f5e15] [cursor=pointer]: ☀
+        - button "Dark mode" [pressed] [ref=f5e16] [cursor=pointer]: ☾
+    - generic [ref=f5e21]:
+      - generic [ref=f5e22]:
+        - generic [ref=f5e23]: career /
+        - heading "Experience" [level=1] [ref=f5e24]
+      - paragraph [ref=f5e25]: Fifteen years across agencies, product teams and freelance work, moving from front-end development into technical leadership.
+    - generic [ref=f5e26]:
+      - article [ref=f5e27]:
+        - generic [ref=f5e28]:
+          - generic [ref=f5e29]: 2025 – Present
+          - generic [ref=f5e30]: Freelance
+        - generic [ref=f5e31]:
+          - generic [ref=f5e32]:
+            - heading "Independent Contractor" [level=3] [ref=f5e33]
+            - generic [ref=f5e34]: Self-employed
+          - list [ref=f5e35]:
+            - listitem [ref=f5e36]:
+              - generic [aria-hidden] [ref=f5e37]: —
+              - generic [ref=f5e38]: Senior full-stack developer for a cloud platform connecting childcare centres with educators.
+            - listitem [ref=f5e39]:
+              - generic [aria-hidden] [ref=f5e40]: —
+              - generic [ref=f5e41]: Mobile app developer for a home fragrance brand.
+      - article [ref=f5e42]:
+        - generic [ref=f5e43]:
+          - generic [ref=f5e44]: 2018 – 2025
+          - generic [ref=f5e45]: Full-time
+        - generic [ref=f5e46]:
+          - generic [ref=f5e47]:
+            - heading "Technical Lead" [level=3] [ref=f5e48]
+            - generic [ref=f5e49]: Studio North
+          - list [ref=f5e50]:
+            - listitem [ref=f5e51]:
+              - generic [aria-hidden] [ref=f5e52]: —
+              - generic [ref=f5e53]: Sole developer maintaining and building the agency's full website portfolio.
+            - listitem [ref=f5e54]:
+              - generic [aria-hidden] [ref=f5e55]: —
+              - generic [ref=f5e56]: Led the rebuild of a health and well-being app; promoted to Technical Lead in 2022.
+      - article [ref=f5e57]:
+        - generic [ref=f5e58]:
+          - generic [ref=f5e59]: 2010 – 2017
+          - generic [ref=f5e60]: Full-time
+        - generic [ref=f5e61]:
+          - generic [ref=f5e62]:
+            - heading "Front-end Developer" [level=3] [ref=f5e63]
+            - generic [ref=f5e64]: Brightline Software
+          - list [ref=f5e65]:
+            - listitem [ref=f5e66]:
+              - generic [aria-hidden] [ref=f5e67]: —
+              - generic [ref=f5e68]: Built over 60 websites for government and higher education clients.
+            - listitem [ref=f5e69]:
+              - generic [aria-hidden] [ref=f5e70]: —
+              - generic [ref=f5e71]: Team lead for the professional services team.
+  - generic [ref=f5e74]:
+    - button [ref=f5e75]
+    - button [ref=f5e81]
+    - button [ref=f5e85]
+    - button [ref=f5e90]

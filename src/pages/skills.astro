@@ -1,0 +1,42 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import { skills, skillsIntro } from '../data/site';
+---
+
+<Base title="Skills">
+	<PageHero title="Skills" intro={skillsIntro} />
+
+	<div class="grid-2">
+		{
+			skills.map((g) => (
+				<section class="tile group">
+					<div class="section-head">
+						<h2>{g.title}</h2>
+						<span class="count">{String(g.items.length).padStart(2, '0')}</span>
+					</div>
+					<ul class="chips">
+						{g.items.map((s) => <li class="chip">{s}</li>)}
+					</ul>
+				</section>
+			))
+		}
+	</div>
+</Base>
+
+<style>
+	.group {
+		padding: 24px;
+		display: flex;
+		flex-direction: column;
+		gap: 14px;
+	}
+
+	.chips {
+		list-style: none;
+		padding: 0;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 6px;
+	}
+</style>

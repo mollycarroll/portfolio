@@ -1,0 +1,97 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import { getCollection } from 'astro:content';
+import { projectsIntro } from '../data/site';
+
+const projects = (await getCollection('projects')).sort((a, b) => a.data.order - b.data.order);
+---
+
+<Base title="Projects">
+	<PageHero title="Projects" intro={projectsIntro} />
+
+	<div class="grid-2">
+		{
+			projects.map((p) => (
+				<a class="tile project" href={`/projects/${p.id}`}>
+					<div class="shot mono">screenshot</div>
+					<div class="project-body">
+						<div class="project-head">
+							<span class="project-name">{p.data.name}</span>
+							<span class="year mono">{p.data.year} ↗</span>
+						</div>
+						<span class="desc">{p.data.summary}</span>
+						<ul class="stack">
+							{p.data.stack.map((s) => (
+								<li class="chip chip-stack">{s}</li>
+							))}
+						</ul>
+					</div>
+				</a>
+			))
+		}
+	</div>
+</Base>
+
+<style>
+	.project {
+		padding: 12px 12px 22px;
+		display: flex;
+		flex-direction: column;
+		gap: 18px;
+	}
+
+	.project:hover {
+		background: var(--tile-hover);
+	}
+
+	.shot {
+		aspect-ratio: 16 / 9;
+		border-radius: 9px;
+		background: repeating-linear-gradient(45deg, var(--stripe-a) 0 8px, var(--stripe-b) 8px 16px);
+		display: flex;
+		align-items: flex-end;
+		padding: 10px;
+		font-size: 11px;
+		color: var(--stripe-text);
+	}
+
+	.project-body {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		padding: 0 10px;
+	}
+
+	.project-head {
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+		gap: 12px;
+	}
+
+	.project-name {
+		font-size: 20px;
+		font-weight: 700;
+		letter-spacing: -0.02em;
+	}
+
+	.year {
+		font-size: 12px;
+		color: var(--muted);
+	}
+
+	.desc {
+		font-size: 13.5px;
+		line-height: 1.5;
+		color: var(--text-body);
+	}
+
+	.stack {
+		list-style: none;
+		padding: 4px 0 0;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 6px;
+	}
+</style>

@@ -1,0 +1,71 @@
+- generic [active] [ref=f9e1]:
+  - generic [ref=f9e2]:
+    - banner [ref=f9e3]:
+      - link "sam rivera design / web / mobile" [ref=f9e4] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f9e5]: sam rivera
+        - generic [ref=f9e6]: design / web / mobile
+      - generic [ref=f9e7]:
+        - group "Colour theme" [ref=f9e8]:
+          - button "Light mode" [pressed] [ref=f9e9] [cursor=pointer]: ☀
+          - button "Dark mode" [ref=f9e10] [cursor=pointer]: ☾
+        - navigation "Main" [ref=f9e11]:
+          - link "Home" [ref=f9e12] [cursor=pointer]:
+            - /url: /
+          - link "Projects" [ref=f9e13] [cursor=pointer]:
+            - /url: /projects
+          - link "Skills" [ref=f9e14] [cursor=pointer]:
+            - /url: /skills
+          - link "Career" [ref=f9e15] [cursor=pointer]:
+            - /url: /career
+          - link "Education" [ref=f9e16] [cursor=pointer]:
+            - /url: /education
+        - link "Resume ↓" [ref=f9e17] [cursor=pointer]:
+          - /url: /resume.pdf
+    - generic [ref=f9e18]:
+      - heading "Hello." [level=1] [ref=f9e19]
+      - generic [ref=f9e20]:
+        - paragraph [ref=f9e21]: I'm a designer and developer building websites and mobile apps for clients of all sizes. I work across the whole process, from scoping and wireframes through to shipping and maintaining production code.
+        - paragraph [ref=f9e22]: Day to day I work in React, Next.js and TypeScript, with a background in UX and UI design that helps me plan and design products, not just build them.
+    - navigation "Sections" [ref=f9e23]:
+      - link "01 Projects Selected client and personal work across web and mobile." [ref=f9e24] [cursor=pointer]:
+        - /url: /projects
+        - generic [ref=f9e25]:
+          - generic [ref=f9e26]: "01"
+          - generic [aria-hidden] [ref=f9e27]: ↗
+        - generic [ref=f9e28]:
+          - generic [ref=f9e29]: Projects
+          - generic [ref=f9e30]: Selected client and personal work across web and mobile.
+      - link "02 Skills Front-end, back-end and mobile development with modern tools." [ref=f9e31] [cursor=pointer]:
+        - /url: /skills
+        - generic [ref=f9e32]:
+          - generic [ref=f9e33]: "02"
+          - generic [aria-hidden] [ref=f9e34]: ↗
+        - generic [ref=f9e35]:
+          - generic [ref=f9e36]: Skills
+          - generic [ref=f9e37]: Front-end, back-end and mobile development with modern tools.
+      - link "03 Career Roles, teams and projects from freelance to technical lead." [ref=f9e38] [cursor=pointer]:
+        - /url: /career
+        - generic [ref=f9e39]:
+          - generic [ref=f9e40]: "03"
+          - generic [aria-hidden] [ref=f9e41]: ↗
+        - generic [ref=f9e42]:
+          - generic [ref=f9e43]: Career
+          - generic [ref=f9e44]: Roles, teams and projects from freelance to technical lead.
+      - link "04 Education Certifications, conferences and ongoing development." [ref=f9e45] [cursor=pointer]:
+        - /url: /education
+        - generic [ref=f9e46]:
+          - generic [ref=f9e47]: "04"
+          - generic [aria-hidden] [ref=f9e48]: ↗
+        - generic [ref=f9e49]:
+          - generic [ref=f9e50]: Education
+          - generic [ref=f9e51]: Certifications, conferences and ongoing development.
+    - link "Currently taking on new projects GET IN TOUCH →" [ref=f9e52] [cursor=pointer]:
+      - /url: mailto:hello@example.com
+      - generic [ref=f9e53]: Currently taking on new projects
+      - generic [ref=f9e54]: GET IN TOUCH →
+  - generic [ref=f9e57]:
+    - button [ref=f9e58]
+    - button [ref=f9e64]
+    - button [ref=f9e68]
+    - button [ref=f9e73]

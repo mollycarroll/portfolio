@@ -1,0 +1,55 @@
+---
+interface Props {
+	title: string;
+	intro: string;
+	eyebrow?: string;
+}
+
+const { title, intro, eyebrow } = Astro.props;
+---
+
+<div class="tile-accent hero">
+	<div class="hero-title">
+		{eyebrow && <span class="eyebrow mono">{eyebrow}</span>}
+		<h1>{title}</h1>
+	</div>
+	<p>{intro}</p>
+</div>
+
+<style>
+	.hero {
+		padding: 32px;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 32px;
+		align-items: end;
+	}
+
+	.hero-title {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+	}
+
+	.eyebrow {
+		font-size: 12px;
+	}
+
+	h1 {
+		font: 700 clamp(40px, 8vw, 64px) / 0.9 'Space Grotesk', sans-serif;
+		letter-spacing: -0.045em;
+	}
+
+	p {
+		font-size: 14.5px;
+		line-height: 1.6;
+	}
+
+	@media (max-width: 760px) {
+		.hero {
+			grid-template-columns: 1fr;
+			gap: 20px;
+			padding: 24px;
+		}
+	}
+</style>

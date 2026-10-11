@@ -1,0 +1,140 @@
+---
+import Base from '../layouts/Base.astro';
+import { site, bio, homeCards } from '../data/site';
+---
+
+<Base>
+	<section class="tile hello">
+		<h1>Hello<span class="dot">.</span></h1>
+		<div class="bio">
+			{bio.map((p) => <p>{p}</p>)}
+		</div>
+	</section>
+
+	<nav class="grid-4" aria-label="Sections">
+		{
+			homeCards.map((c) => (
+				<a class="tile card" href={c.href}>
+					<div class="card-top mono">
+						<span>{c.num}</span>
+						<span aria-hidden="true">↗</span>
+					</div>
+					<div class="card-body">
+						<span class="card-title">{c.title}</span>
+						<span class="card-desc">{c.desc}</span>
+					</div>
+				</a>
+			))
+		}
+	</nav>
+
+	<a class="tile-alt banner" href={`mailto:${site.email}`}>
+		<span class="banner-text">{site.availability}</span>
+		<span class="banner-cta mono">GET IN TOUCH →</span>
+	</a>
+</Base>
+
+<style>
+	.hello {
+		padding: 36px;
+		display: grid;
+		grid-template-columns: 1fr 1.6fr;
+		gap: 40px;
+		align-items: start;
+	}
+
+	h1 {
+		font: 700 clamp(48px, 10vw, 72px) / 0.9 'Space Grotesk', sans-serif;
+		letter-spacing: -0.045em;
+	}
+
+	.dot {
+		color: var(--accent-text);
+	}
+
+	.bio {
+		display: flex;
+		flex-direction: column;
+		gap: 14px;
+	}
+
+	.bio p {
+		font-size: 14.5px;
+		line-height: 1.6;
+		color: var(--text-body);
+		text-wrap: pretty;
+	}
+
+	.card {
+		padding: 22px;
+		display: flex;
+		flex-direction: column;
+		gap: 36px;
+	}
+
+	.card:hover {
+		background: var(--accent);
+		color: var(--accent-fg);
+	}
+
+	.card-top {
+		display: flex;
+		justify-content: space-between;
+		font-size: 12px;
+		opacity: 0.6;
+	}
+
+	.card-body {
+		display: flex;
+		flex-direction: column;
+		gap: 6px;
+	}
+
+	.card-title {
+		font-size: 22px;
+		font-weight: 700;
+		letter-spacing: -0.02em;
+	}
+
+	.card-desc {
+		font-size: 13px;
+		line-height: 1.5;
+		opacity: 0.65;
+	}
+
+	.banner {
+		padding: 16px 22px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 16px;
+	}
+
+	.banner-text {
+		font-weight: 700;
+		font-size: 15px;
+	}
+
+	.banner-cta {
+		font-weight: 700;
+		font-size: 12px;
+		white-space: nowrap;
+	}
+
+	@media (max-width: 760px) {
+		.hello {
+			grid-template-columns: 1fr;
+			gap: 24px;
+			padding: 24px;
+		}
+
+		.card {
+			gap: 24px;
+		}
+
+		.banner {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+</style>

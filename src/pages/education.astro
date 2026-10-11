@@ -1,0 +1,75 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import { eduGroups, eduIntro } from '../data/site';
+---
+
+<Base title="Education">
+	<PageHero title="Education" intro={eduIntro} />
+
+	{
+		eduGroups.map((g) => (
+			<section class="group">
+				<div class="section-head group-head">
+					<h2>{g.title}</h2>
+					<span class="count">{String(g.items.length).padStart(2, '0')}</span>
+				</div>
+				<div class="grid-3">
+					{g.items.map((e) => (
+						<article class="tile item">
+							<span class="year mono">{e.year}</span>
+							<div class="item-body">
+								<span class="item-title">{e.title}</span>
+								<span class="org">{e.org}</span>
+							</div>
+						</article>
+					))}
+				</div>
+			</section>
+		))
+	}
+</Base>
+
+<style>
+	.group {
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+	}
+
+	.group-head {
+		padding: 12px 4px 0;
+	}
+
+	.item {
+		padding: 20px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		gap: 28px;
+		min-height: 120px;
+	}
+
+	.year {
+		font-size: 12px;
+		color: var(--muted);
+	}
+
+	.item-body {
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
+	}
+
+	.item-title {
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 1.25;
+		letter-spacing: -0.01em;
+	}
+
+	.org {
+		font-size: 13px;
+		color: var(--muted-2);
+	}
+</style>

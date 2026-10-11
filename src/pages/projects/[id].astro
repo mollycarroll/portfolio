@@ -1,0 +1,171 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+
+export async function getStaticPaths() {
+	const projects = await getCollection('projects');
+	return projects.map((project) => ({ params: { id: project.id }, props: { project } }));
+}
+
+const { project } = Astro.props;
+const { name, year, summary, stack, url, repo } = project.data;
+const { Content } = await render(project);
+---
+
+<Base title={name} description={summary}>
+	<a class="back mono" href="/projects">← Projects</a>
+
+	<PageHero eyebrow={`${year} /`} title={name} intro={summary} />
+
+	<div class="meta">
+		<ul class="stack" aria-label="Built with">
+			{stack.map((s) => <li class="chip chip-stack">{s}</li>)}
+		</ul>
+		<div class="links">
+			{
+				url && (
+					<a class="tile-alt link mono" href={url} target="_blank" rel="noopener noreferrer">
+						VISIT PROJECT ↗
+					</a>
+				)
+			}
+			{
+				repo && (
+					<a class="tile link link-plain mono" href={repo} target="_blank" rel="noopener noreferrer">
+						VIEW CODE ↗
+					</a>
+				)
+			}
+		</div>
+	</div>
+
+	<article class="tile prose">
+		<Content />
+	</article>
+</Base>
+
+<style>
+	.back {
+		font-size: 12px;
+		color: var(--muted);
+		padding: 0 4px;
+		align-self: flex-start;
+	}
+
+	.back:hover {
+		color: var(--text);
+	}
+
+	.meta {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 16px;
+		flex-wrap: wrap;
+		padding: 0 4px;
+	}
+
+	.stack {
+		list-style: none;
+		padding: 0;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 6px;
+	}
+
+	.links {
+		display: flex;
+		gap: 8px;
+		flex-wrap: wrap;
+	}
+
+	.link {
+		font-weight: 700;
+		font-size: 12px;
+		padding: 10px 16px;
+		border-radius: 99px;
+	}
+
+	.link-plain {
+		border: 1px solid var(--rule);
+	}
+
+	.link:hover {
+		filter: brightness(0.95);
+	}
+
+	.prose {
+		padding: 36px;
+		max-width: 100%;
+		color: var(--text-body);
+		font-size: 15px;
+		line-height: 1.65;
+	}
+
+	.prose :global(h2) {
+		color: var(--text);
+		font-size: 22px;
+		font-weight: 700;
+		letter-spacing: -0.02em;
+		margin: 32px 0 10px;
+	}
+
+	.prose :global(h2:first-child) {
+		margin-top: 0;
+	}
+
+	.prose :global(h3) {
+		color: var(--text);
+		font-size: 17px;
+		font-weight: 700;
+		margin: 24px 0 8px;
+	}
+
+	.prose :global(p),
+	.prose :global(ul),
+	.prose :global(ol) {
+		margin: 0 0 14px;
+	}
+
+	.prose :global(ul),
+	.prose :global(ol) {
+		padding-left: 22px;
+	}
+
+	.prose :global(li) {
+		margin-bottom: 6px;
+	}
+
+	.prose :global(a) {
+		color: var(--accent-text);
+		text-decoration: underline;
+		text-underline-offset: 3px;
+	}
+
+	.prose :global(code) {
+		font: 13px 'Space Mono', ui-monospace, monospace;
+		background: var(--chip);
+		color: var(--chip-text);
+		padding: 2px 6px;
+		border-radius: 5px;
+	}
+
+	.prose :global(img) {
+		max-width: 100%;
+		height: auto;
+		border-radius: 9px;
+	}
+
+	.prose :global(blockquote) {
+		margin: 0 0 14px;
+		padding-left: 16px;
+		border-left: 3px solid var(--accent);
+	}
+
+	@media (max-width: 760px) {
+		.prose {
+			padding: 24px;
+		}
+	}
+</style>

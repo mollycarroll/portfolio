@@ -1,0 +1,131 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import { jobs, careerIntro } from '../data/site';
+---
+
+<Base title="Career">
+	<PageHero eyebrow="career /" title="Experience" intro={careerIntro} />
+
+	<div class="jobs">
+		{
+			jobs.map((j) => (
+				<article class="tile job">
+					<div class="job-meta">
+						<span class="dates mono">{j.dates}</span>
+						<span class="type mono">{j.type}</span>
+					</div>
+					<div class="job-main">
+						<div class="job-title">
+							<h3>{j.role}</h3>
+							<span class="company">{j.company}</span>
+						</div>
+						<ul class="points">
+							{j.points.map((pt) => (
+								<li>
+									<span class="dash" aria-hidden="true">
+										—
+									</span>
+									<span>{pt}</span>
+								</li>
+							))}
+						</ul>
+					</div>
+				</article>
+			))
+		}
+	</div>
+</Base>
+
+<style>
+	.jobs {
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+	}
+
+	.job {
+		padding: 24px 28px;
+		display: grid;
+		grid-template-columns: 200px 1fr;
+		gap: 32px;
+	}
+
+	.job-meta {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		align-items: flex-start;
+	}
+
+	.dates {
+		font-size: 12px;
+		color: var(--muted-2);
+	}
+
+	.type {
+		font-weight: 700;
+		font-size: 11px;
+		background: var(--alt);
+		color: var(--alt-fg);
+		padding: 3px 8px;
+		border-radius: 5px;
+	}
+
+	.job-main {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	.job-title {
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
+	}
+
+	h3 {
+		font-size: 22px;
+		font-weight: 700;
+		letter-spacing: -0.02em;
+	}
+
+	.company {
+		font-size: 14px;
+		color: var(--accent-text);
+	}
+
+	.points {
+		list-style: none;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 7px;
+	}
+
+	.points li {
+		display: grid;
+		grid-template-columns: 18px 1fr;
+		font-size: 14px;
+		line-height: 1.55;
+		color: var(--text-body);
+	}
+
+	.dash {
+		color: var(--dash);
+	}
+
+	@media (max-width: 760px) {
+		.job {
+			grid-template-columns: 1fr;
+			gap: 16px;
+			padding: 20px;
+		}
+
+		.job-meta {
+			flex-direction: row;
+			align-items: center;
+			gap: 12px;
+		}
+	}
+</style>

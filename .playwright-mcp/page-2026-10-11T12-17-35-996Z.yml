@@ -1,0 +1,80 @@
+- generic [ref=f8e1]:
+  - generic [ref=f8e2]:
+    - banner [ref=f8e3]:
+      - link "sam rivera design / web / mobile" [ref=f8e4] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f8e5]: sam rivera
+        - generic [ref=f8e6]: design / web / mobile
+      - generic [ref=f8e7]:
+        - group "Colour theme" [ref=f8e8]:
+          - button "Light mode" [active] [pressed] [ref=f8e9] [cursor=pointer]: ☀
+          - button "Dark mode" [ref=f8e10] [cursor=pointer]: ☾
+        - navigation "Main" [ref=f8e11]:
+          - link "Home" [ref=f8e12] [cursor=pointer]:
+            - /url: /
+          - link "Projects" [ref=f8e13] [cursor=pointer]:
+            - /url: /projects
+          - link "Skills" [ref=f8e14] [cursor=pointer]:
+            - /url: /skills
+          - link "Career" [ref=f8e15] [cursor=pointer]:
+            - /url: /career
+          - link "Education" [ref=f8e16] [cursor=pointer]:
+            - /url: /education
+        - link "Resume ↓" [ref=f8e17] [cursor=pointer]:
+          - /url: /resume.pdf
+    - generic [ref=f8e18]:
+      - heading "Skills" [level=1] [ref=f8e20]
+      - paragraph [ref=f8e21]: A breakdown of the tools and disciplines I use across the design and development lifecycle, from first wireframe to deployment.
+    - generic [ref=f8e22]:
+      - generic [ref=f8e23]:
+        - generic [ref=f8e24]:
+          - heading "UX/UI Design" [level=2] [ref=f8e25]
+          - generic [ref=f8e26]: "07"
+        - list [ref=f8e27]:
+          - listitem [ref=f8e28]: User journeys
+          - listitem [ref=f8e29]: Wireframing
+          - listitem [ref=f8e30]: Prototyping
+          - listitem [ref=f8e31]: Figma
+          - listitem [ref=f8e32]: Design systems
+          - listitem [ref=f8e33]: Typography
+          - listitem [ref=f8e34]: Responsive design
+      - generic [ref=f8e35]:
+        - generic [ref=f8e36]:
+          - heading "Front-end" [level=2] [ref=f8e37]
+          - generic [ref=f8e38]: "07"
+        - list [ref=f8e39]:
+          - listitem [ref=f8e40]: TypeScript
+          - listitem [ref=f8e41]: React
+          - listitem [ref=f8e42]: Next.js
+          - listitem [ref=f8e43]: Vite
+          - listitem [ref=f8e44]: TailwindCSS
+          - listitem [ref=f8e45]: Sass/SCSS
+          - listitem [ref=f8e46]: GSAP
+      - generic [ref=f8e47]:
+        - generic [ref=f8e48]:
+          - heading "Back-end" [level=2] [ref=f8e49]
+          - generic [ref=f8e50]: "06"
+        - list [ref=f8e51]:
+          - listitem [ref=f8e52]: Node.js
+          - listitem [ref=f8e53]: PostgreSQL
+          - listitem [ref=f8e54]: Prisma
+          - listitem [ref=f8e55]: Firebase
+          - listitem [ref=f8e56]: API development
+          - listitem [ref=f8e57]: Payload CMS
+      - generic [ref=f8e58]:
+        - generic [ref=f8e59]:
+          - heading "Mobile & DevOps" [level=2] [ref=f8e60]
+          - generic [ref=f8e61]: "07"
+        - list [ref=f8e62]:
+          - listitem [ref=f8e63]: Ionic
+          - listitem [ref=f8e64]: Capacitor
+          - listitem [ref=f8e65]: Xcode
+          - listitem [ref=f8e66]: Android Studio
+          - listitem [ref=f8e67]: AWS
+          - listitem [ref=f8e68]: Docker
+          - listitem [ref=f8e69]: CI/CD
+  - generic [ref=f8e72]:
+    - button [ref=f8e73]
+    - button [ref=f8e79]
+    - button [ref=f8e83]
+    - button [ref=f8e88]

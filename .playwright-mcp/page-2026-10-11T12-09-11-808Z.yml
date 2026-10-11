@@ -1,0 +1,50 @@
+- generic [active] [ref=f2e1]:
+  - generic [ref=f2e2]:
+    - banner [ref=f2e3]:
+      - link "sam rivera design / web / mobile" [ref=f2e4] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f2e5]: sam rivera
+        - generic [ref=f2e6]: design / web / mobile
+      - navigation "Main" [ref=f2e7]:
+        - link "Projects" [ref=f2e8] [cursor=pointer]:
+          - /url: /projects
+        - link "Skills" [ref=f2e9] [cursor=pointer]:
+          - /url: /skills
+        - link "Career" [ref=f2e10] [cursor=pointer]:
+          - /url: /career
+        - link "Education" [ref=f2e11] [cursor=pointer]:
+          - /url: /education
+        - link "Resume ↗" [ref=f2e12] [cursor=pointer]:
+          - /url: /resume.pdf
+      - group "Colour theme" [ref=f2e14]:
+        - button "Light mode" [ref=f2e15] [cursor=pointer]: ☀
+        - button "Dark mode" [pressed] [ref=f2e16] [cursor=pointer]: ☾
+    - link "← Projects" [ref=f2e21] [cursor=pointer]:
+      - /url: /projects
+    - generic [ref=f2e22]:
+      - generic [ref=f2e23]:
+        - generic [ref=f2e24]: 2025 /
+        - heading "Kindred Care" [level=1] [ref=f2e25]
+      - paragraph [ref=f2e26]: Cloud platform matching childcare centres with available educators in real time.
+    - generic [ref=f2e27]:
+      - list "Built with" [ref=f2e28]:
+        - listitem [ref=f2e29]: Next.js
+        - listitem [ref=f2e30]: PostgreSQL
+        - listitem [ref=f2e31]: AWS
+      - link "VISIT PROJECT ↗" [ref=f2e33] [cursor=pointer]:
+        - /url: https://example.com/kindred-care
+    - article [ref=f2e34]:
+      - heading "Overview" [level=2] [ref=f2e35]
+      - paragraph [ref=f2e36]: Childcare centres regularly need to cover shifts at short notice, and qualified educators have no easy way to see who needs them. Kindred Care connects the two sides in real time.
+      - heading "What I did" [level=2] [ref=f2e37]
+      - list [ref=f2e38]:
+        - listitem [ref=f2e39]: Worked as the senior full-stack developer from first wireframes through to production.
+        - listitem [ref=f2e40]: Designed the shift-matching flow and the booking screens for both centres and educators.
+        - listitem [ref=f2e41]: Built the platform on Next.js with a PostgreSQL database, deployed on AWS.
+      - heading "Outcome" [level=2] [ref=f2e42]
+      - paragraph [ref=f2e43]: "Replace this section with results: who uses it, what changed for them, and any numbers you can share."
+  - generic [ref=f2e46]:
+    - button [ref=f2e47]
+    - button [ref=f2e53]
+    - button [ref=f2e57]
+    - button [ref=f2e62]
