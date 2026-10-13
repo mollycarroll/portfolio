@@ -172,10 +172,13 @@ export const eduGroups: EduGroup[] = [
 ];
 
 export const goodreadsUrl =
-	'https://www.goodreads.com/review/list/2434730?tag=tech';
+	'https://www.goodreads.com/review/list/2434730?order=a&shelf=tech&sort=author';
 
 export const books: Book[] = [
-	{ title: 'Designing Data-Intensive Applications', author: 'Martin Kleefman' },
+	{
+		title: 'Designing Data-Intensive Applications',
+		author: 'Martin Kleppmann',
+	},
 	{
 		title: 'The Pragmatic Programmer',
 		author: 'Andrew Hunt & Dave Thomas',
